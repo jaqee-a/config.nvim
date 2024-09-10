@@ -55,4 +55,10 @@ return {
 		-- keys = vim.builtin.terminal.open_mapping,
 		-- enabled = vim.builtin.terminal.active,
 	},
+	{
+		"folke/tokyonight.nvim",
+		lazy = false,
+		priority = 1000,
+		opts = {},
+	}
 }
