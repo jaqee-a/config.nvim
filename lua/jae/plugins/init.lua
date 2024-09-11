@@ -86,11 +86,25 @@ return {
 	  },
 	},
 	{
-		"windwp/nvim-autopairs",
-		event = "InsertEnter",
-		config = function()
-		  require("jae.core.autopairs").setup()
-		end,
-		dependencies = { "nvim-treesitter/nvim-treesitter", "hrsh7th/nvim-cmp" },
+	  "windwp/nvim-autopairs",
+	  event = "InsertEnter",
+	  config = function()
+		require("jae.core.autopairs").setup()
+	  end,
+	  dependencies = { "nvim-treesitter/nvim-treesitter", "hrsh7th/nvim-cmp" },
+	},
+	{
+	  "kylechui/nvim-surround",
+	  version = "*", -- Use for stability; omit to use `main` branch for the latest features
+	  event = {"BufReadPre", "BufNewFile"},
+	  config = true
+	},
+	{
+	  "lewis6991/gitsigns.nvim",
+	  config = function()
+		require("jae.core.gitsigns").setup()
+	  end,
+	  event = "User FileOpened",
+	  -- event = {"BufReadPre", "BufNewFile"}
 	},
 }
