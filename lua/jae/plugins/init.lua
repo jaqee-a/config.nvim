@@ -1,11 +1,19 @@
 return {
 	{ "rose-pine/neovim", name = "rose-pine" },
-	{ 'nvim-telescope/telescope.nvim', tag = '0.1.8', 
+	{ "lunarvim/lunar.nvim", name = "lunar" },
+	{ 'nvim-telescope/telescope.nvim', tag = '0.1.8',
 	dependencies = { 'nvim-lua/plenary.nvim' }},
-	{ "nvim-treesitter/nvim-treesitter", build = ":TSUpdate" },
-	{ "nvim-tree/nvim-tree.lua", version = "*", lazy = false, dependencies = { "nvim-tree/nvim-web-devicons", }, 
-	config = function() 
-		require("nvim-tree").setup {} 
+	{
+	  "nvim-treesitter/nvim-treesitter",
+	  build = ":TSUpdate",
+      config = function()
+        require("jae.core.nvimtree").setup()
+      end,
+	  event = "User DirOpened"
+    },
+	{ "nvim-tree/nvim-tree.lua", version = "*", lazy = false, dependencies = { "nvim-tree/nvim-web-devicons", },
+	config = function()
+		require("nvim-tree").setup {}
 	end, },
 	{'folke/tokyonight.nvim'},
 	{'VonHeikemen/lsp-zero.nvim', branch = 'v4.x'},
