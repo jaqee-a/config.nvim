@@ -53,7 +53,6 @@ return {
 		  "ToggleTermSendVisualSelection",
 		},
 		-- keys = vim.builtin.terminal.open_mapping,
-		-- enabled = vim.builtin.terminal.active,
 	},
 	{
 		"folke/tokyonight.nvim",
@@ -76,5 +75,22 @@ return {
 	  config = function()
 		require("jae.core.bufferline").setup()
 	  end,
-    }
+    },
+	{
+	  "folke/which-key.nvim",
+	  event = "VeryLazy",
+	  opts = {
+		-- your configuration comes here
+		-- or leave it empty to use the default settings
+		-- refer to the configuration section below
+	  },
+	},
+	{
+		"windwp/nvim-autopairs",
+		event = "InsertEnter",
+		config = function()
+		  require("jae.core.autopairs").setup()
+		end,
+		dependencies = { "nvim-treesitter/nvim-treesitter", "hrsh7th/nvim-cmp" },
+	},
 }
