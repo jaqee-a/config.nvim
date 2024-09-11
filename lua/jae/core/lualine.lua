@@ -20,16 +20,16 @@ local style = {
       components.branch,
     },
     lualine_c = {
-      components.diff
+      components.diff,
+      components.python_env,
     },
     lualine_x = {
       components.diagnostics,
       components.lsp,
+      components.spaces,
       components.filetype,
     },
-    lualine_y = {
-	  components.location
-	},
+    lualine_y = { components.location },
     lualine_z = {
       components.progress,
     },
@@ -42,16 +42,16 @@ local style = {
       components.branch,
     },
     lualine_c = {
-      components.diff
+      components.diff,
+      components.python_env,
     },
     lualine_x = {
       components.diagnostics,
       components.lsp,
+      components.spaces,
       components.filetype,
     },
-    lualine_y = {
-	  components.location
-	},
+    lualine_y = { components.location },
     lualine_z = {
       components.progress,
     },
