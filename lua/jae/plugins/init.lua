@@ -61,5 +61,20 @@ return {
 		priority = 1000,
 		opts = {},
 	},
-	{ 'Exafunction/codeium.vim' }
+	{ 'Exafunction/codeium.vim' },
+	{
+	  'nvim-lualine/lualine.nvim',
+	  dependencies = { 'nvim-tree/nvim-web-devicons' },
+	  config = function()
+		require("jae.core.lualine").setup()
+	  end,
+	},
+	{
+	  'akinsho/bufferline.nvim',
+	  version = "*",
+	  dependencies = 'nvim-tree/nvim-web-devicons',
+	  config = function()
+		require("jae.core.bufferline").setup()
+	  end,
+    }
 }
