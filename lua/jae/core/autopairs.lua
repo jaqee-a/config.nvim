@@ -3,7 +3,6 @@ local M = {}
 function M.config()
   return {
     active = true,
-    on_config_done = nil,
     ---@usage  modifies the function or method delimiter by filetypes
     map_char = {
       all = "(",

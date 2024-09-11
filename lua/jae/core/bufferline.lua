@@ -3,7 +3,6 @@ local M = {}
 M.config = function()
   return {
     active = true,
-    on_config_done = nil,
     highlights = {
       background = {
         italic = true,

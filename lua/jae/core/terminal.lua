@@ -3,7 +3,6 @@ local M = {}
 M.config = function()
   return {
     active = true,
-    on_config_done = nil,
     -- size can be a number or function which is passed the current terminal
     size = 20,
     open_mapping = [[<c-\>]],
@@ -40,9 +39,6 @@ M.config = function()
     },
     -- Add executables on the config.lua
     -- { cmd, keymap, description, direction, size }
-    -- lvim.builtin.terminal.execs = {...} to overwrite
-    -- lvim.builtin.terminal.execs[#lvim.builtin.terminal.execs+1] = {"gdb", "tg", "GNU Debugger"}
-    -- TODO: pls add mappings in which key and refactor this
     execs = {
       { nil, "<M-1>", "Horizontal Terminal", "horizontal", 0.3 },
       { nil, "<M-2>", "Vertical Terminal", "vertical", 0.4 },
