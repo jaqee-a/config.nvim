@@ -6,3 +6,9 @@ vim.cmd('colorscheme lunar')
 
 vim.keymap.set("v", "<", "<gv", {});
 vim.keymap.set("v", ">", ">gv", {});
+
+vim.keymap.set("n", "<A-j>", "<Esc>:m .+1<CR>==", {});
+vim.keymap.set("n", "<A-k>", "<Esc>:m .-2<CR>==", {});
+
+vim.keymap.set("i", "<A-j>", "<Esc>:m .+1<CR>==gi", {});
+vim.keymap.set("i", "<A-k>", "<Esc>:m .-2<CR>==gi", {});
